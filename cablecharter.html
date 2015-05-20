@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Knit Charting Tool</title>
+	
+	<!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/test.css" rel="stylesheet">
+  </head>
+  <body>
+
+	<div class="container">
+	<div class="page-header">
+		<h1>Knit Charting Tool</h1>
+	</div>
+	
+	<div class="info">
+	<p>Put the number of stitches you want to work across in the given boxes and click "Create!" Once you have a basic chart, click and drag cables into the chart area. The cables will drop into the chart. When you're finished, click the "Print!" button to print. <!--or "PDF!" to get a PDF verson of your chart. (PDF functionality in progress)--></p>
+	
+	<p>I want an area...</p>
+	<form class="form-horizontal" role="form">
+	<div class="form-group">
+		<label for="columns" class="col-md-3">...this number of stitches across: </label><input type="text" class="form-control col-md-3" id="columns">
+	</div>	
+	<div class="form-group">
+		<label for="rows" class="col-md-3">...this number of rows high: </label><input type="text" class="form-control col-md-3" id="rows">
+		
+		<div class="col-md-2">
+			<button type="button" class="btn btn-success create">Create!</button>
+		</div>
+	</div>
+	</form>
+	</div>
+	
+	<div class="row main">
+			<ul class="col-md-3 caro">
+			<div class="row"><span>Current symbol: </span><div class="symbol current"></div></div>
+				<li class="openclose float-left active col-md-12"><p class="col-sm-offset-2">Color</p>
+					<div class="symbol color-red"></div>
+					<div class="symbol color-orange"></div>
+					<div class="symbol color-yellow"></div>
+					<div class="symbol color-green"></div>
+					<div class="symbol color-blue"></div>
+					<div class="symbol color-purple"></div>
+					<!--<div class="symbol color-white"></div>-->
+					<div class="symbol color-gray"></div>
+					<div class="symbol color-black"></div>
+				</li>
+				<li class="openclose float-left col-md-12"><p class="col-sm-offset-2">Lace</p>
+					<div class="symbol color-white" title="Knit"></div>
+					<div class="symbol lace-purl" title="Purl"></div>
+					<div class="symbol lace-yo" title="Yarn-over"></div>
+					<div class="symbol lace-k2tog" title="Knit two together"></div>
+					<div class="symbol lace-ssk" title="Slip, slip knit"></div>
+					<div class="symbol lace-k3tog" title="Knit three together"></div>
+					<div class="symbol lace-sk2po" title="slip, knit two together, pass over"></div>
+					<div class="symbol lace-ktbl" title="Knit through the back loop"></div>
+				</li>
+				<!--<li><a>Cables</a></li>-->
+			</ul>
+			
+
+			<div class="col-md-9 float-left">
+				<div id="chart">
+				</div>
+			</div>
+	</div>
+	
+	<div class="row">
+		<button type="button" class="btn btn-success print" >Print!</button> <!--<button type="button" class="btn btn-success">PDF!</button>-->
+	</div>
+	
+	</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+	
+	<script src="js/chart.js"></script>
+  </body>
+</html>

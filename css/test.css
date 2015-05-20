@@ -1,0 +1,290 @@
+
+/*The base styles, any sizes are for mobile*/
+label{
+	font-weight: normal;
+}
+
+ul{
+	list-style: none;
+}
+
+.create{
+	float:right;
+}
+
+.float-left{
+	float:left;
+}
+
+/*The main area, containing the chart. Has a little border for emphasis.*/
+.main{
+	display: none;
+	padding: 5% 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+.openclose{
+	padding: 0 0 5% 0;
+	width: 50%;
+}
+
+.openclose p{
+	padding-left: 25px;
+}
+
+.openclose div{
+	float:left;
+	display: none;
+}
+
+.openclose.active div{
+	display:block;
+}
+
+.openclose:before{
+	content: " ";
+	background: url(../img/openclose.png) no-repeat 0 0;
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	left: 3px;
+}
+
+.openclose.active:before{
+	background: url(../img/openclose.png) no-repeat 0 -21px;
+}
+
+.box{
+	border: solid 1px #000;
+	width: 40px;
+	height: 40px;
+}
+
+#chart{
+	overflow: auto;
+}
+
+.symbol{
+	border: 1px solid #333;
+	float: left;
+	height: 40px;
+	width: 40px;
+	margin: 3px;
+	padding: 5px;
+}
+
+.row span:first-child{
+	float:left;
+	line-height: 40px;
+}
+
+/*there has GOT to be a better way to do this*/
+.color-red{
+	background-color: #FF0000;
+}
+
+.color-orange{
+	background-color: #FF8000;
+}
+
+.color-yellow{
+	background-color: #FFFF00;
+}
+
+.color-green{
+	background-color: #00FF00;
+}
+
+.color-blue{
+	background-color: #0000FF;
+}
+
+.color-purple{
+	background-color: #8000FF;
+}
+
+.color-white{
+	background-color: #FFF;
+}
+
+.color-gray{
+	background-color: #888;
+}
+
+.color-black{
+	background-color: #000;
+}
+
+/*For lace, since they're images, I used different images to make sure they fit each box properly. For mobile you get large images, for mid-range you get medium, and for desktops with a mouse you get small.*/
+.lace-purl{
+	background: url(../img/lg/purl_lg.png);
+}
+
+.lace-yo{
+	background: url(../img/lg/yo_lg.png);
+}
+
+.lace-k2tog{
+	background: url(../img/lg/k2tog_lg.png);
+}
+
+.lace-ssk{
+	background: url(../img/lg/ssk_lg.png);
+}
+
+.lace-k3tog{
+	background: url(../img/lg/k3tog_lg.png);
+}
+
+.lace-sk2po{
+	background: url(../img/lg/sk2po_lg.png);
+}
+
+.lace-ktbl{
+	background: url(../img/lg/ktbl_lg.png);
+}
+
+.no-pad{
+	padding: 0;
+}
+
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+.openclose{
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+.row span:first-child{
+	line-height: 35px;
+}
+
+.box{
+	width: 30px;
+	height: 30px;
+}
+
+.symbol{
+	height: 30px;
+	width: 30px;
+}
+
+.lace-purl{
+	background: url(../img/md/purl_md.png);
+}
+
+.lace-yo{
+	background: url(../img/md/yo_md.png);
+}
+
+.lace-k2tog{
+	background: url(../img/md/k2tog_md.png);
+}
+
+.lace-ssk{
+	background: url(../img/md/ssk_md.png);
+}
+
+.lace-k3tog{
+	background: url(../img/md/k3tog_md.png);
+}
+
+.lace-sk2po{
+	background: url(../img/md/sk2po_md.png);
+}
+
+.lace-ktbl{
+	background: url(../img/md/ktbl_md.png);
+}
+
+}
+
+/*desktops*/
+@media (min-width: 1000px) {
+
+.form-horizontal input{
+	width: 80px;
+}
+
+.container .row:last-child{
+	margin-top: 20px;
+}
+
+.openclose{
+	padding: 0;
+}
+
+.openclose div{
+	padding-bottom: 10px;
+}
+
+.box{
+	width: 20px;
+	height: 20px;
+}
+
+.symbol{
+	height: 20px;
+	width: 20px;
+}
+
+.row span:first-child{
+	padding: 3px 0 0 12px;
+	line-height:inherit;
+}
+
+.background-adjust{
+	background: -3px -3px;
+}
+
+.lace-purl{
+	background: url(../img/sm/purl.png);
+}
+
+.lace-yo{
+	background: url(../img/sm/yo.png);
+}
+
+.lace-k2tog{
+	background: url(../img/sm/k2tog.png);
+}
+
+.lace-ssk{
+	background: url(../img/sm/ssk.png);
+}
+
+.lace-k3tog{
+	background: url(../img/sm/k3tog.png);
+}
+
+.lace-sk2po{
+	background: url(../img/sm/sk2po.png);
+}
+
+.lace-ktbl{
+	background: url(../img/sm/ktbl.png);
+}
+
+}
+
+/*Print styles. Cut out everything but the chart.*/
+@media print{
+
+.page-header, .info, .caro, .btn{
+	display: none;
+}
+
+.main{
+	border: none;
+}
+
+#chart{
+	max-width: 100%;
+	margin: 10px;
+}
+
+}
